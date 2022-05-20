@@ -1,10 +1,7 @@
- <h1>{{isString}}</h1>
-<button class="btn btn-success" (click)="handleClick()">Click</button>
-<h4>{{isStatus}}</h4>
-<form action="">
-    <input type="text" [ngModel]="">
-</form>
-<div *ngIf="isStatus">
+<h1>{{isString}}</h1>
+<input type="text" [(ngModel)]="isInput" />
+{{isInput}}
+<div>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -15,14 +12,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of listProducts">
+            <tr *ngFor="let product of data">
                 <td>{{product.id}}</td>
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="onHandleClick(product.id)">Delete</button>
+                    <button class="btn btn-info ms-2" (click)="onHandleDetail(product)">Detail</button>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <div>
+        <app-product-detail [pro]="isProducts"></app-product-detail>
+    </div>
 </div>
