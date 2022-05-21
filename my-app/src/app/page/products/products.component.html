@@ -1,6 +1,4 @@
 <h1>{{isString}}</h1>
-<input type="text" [(ngModel)]="isInput" />
-{{isInput}}
 <div>
     <table class="table table-bordered">
         <thead>
@@ -8,6 +6,7 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Description</th>
                 <th>Setting</th>
             </tr>
         </thead>
@@ -16,15 +15,17 @@
                 <td>{{product.id}}</td>
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
+                <td>{{product.desc}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="onHandleClick(product.id)">Delete</button>
-                    <button class="btn btn-info ms-2" (click)="onHandleDetail(product)">Detail</button>
+                    <button class="btn btn-info ms-2" >
+                        <a routerLink="product/{{product.id}}/detail">Detail</a>
+                    </button>
                 </td>
             </tr>
         </tbody>
     </table>
 
     <div>
-        <app-product-detail [pro]="isProducts"></app-product-detail>
     </div>
 </div>
