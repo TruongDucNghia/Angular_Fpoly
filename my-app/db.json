@@ -1,7 +1,28 @@
 {
   "products": [
-    {"id": 1, "name": "Product A", "price": 200, "desc": "MO TA"},
-    {"id": 2, "name": "Product B", "price": 200, "desc": "MO TA"},
-    {"id": 3, "name": "Product C", "price": 200, "desc": "MO TA"}
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 200,
+      "desc": "MO TA"
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 200,
+      "desc": "MO TA"
+    },
+    {
+      "name": "product N",
+      "price": "1000",
+      "desc": "",
+      "id": 3
+    },
+    {
+      "name": "Products T update",
+      "price": "10000",
+      "desc": "mo ta",
+      "id": 4
+    }
   ]
 }

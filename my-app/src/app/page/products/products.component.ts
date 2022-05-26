@@ -30,9 +30,4 @@ export class ProductsComponent implements OnInit {
       })
     }
   }
-
-  // onHandleDetail(product : Iproduct){
-  //   this.isProducts = product
-    
-  // }
 }

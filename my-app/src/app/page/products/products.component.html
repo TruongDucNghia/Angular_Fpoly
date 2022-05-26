@@ -17,9 +17,12 @@
                 <td>{{product.price}}</td>
                 <td>{{product.desc}}</td>
                 <td>
-                    <button class="btn btn-danger" (click)="onHandleClick(product.id)">Delete</button>
+                    <button class="btn btn-danger" (click)="onHandleClick(product.id!)">Delete</button>
                     <button class="btn btn-info ms-2" >
-                        <a routerLink="product/{{product.id}}/detail">Detail</a>
+                        <a routerLink="/product/{{product.id}}/detail">Detail</a>
+                    </button>
+                    <button class="btn btn-success ms-2" >
+                        <a routerLink="/product/{{product.id}}/edit">Update</a>
                     </button>
                 </td>
             </tr>

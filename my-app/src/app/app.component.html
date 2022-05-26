@@ -1,9 +1,16 @@
 <header>
   header
-  <a routerLink='hello'>hello</a>
-  <a routerLink='homepage'>homepage</a>
 </header>
 <hr>
-<app-products ></app-products>
-<app-product-add (createProduct)="handleAddProducts($event)"></app-product-add>
+<main>
+  <a routerLink='homepage'>homepage</a> <br>
+  <a routerLink='products'>Products</a> <br>
+  <a routerLink='products/add'>Add products</a>
+</main>
+<hr>
+
 <router-outlet></router-outlet>
+
+<footer>
+  footer
+</footer>

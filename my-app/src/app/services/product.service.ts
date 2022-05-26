@@ -12,16 +12,23 @@ export class ProductService {
   constructor(
     private http: HttpClient
   ) { }
+  base_url : String = 'http://localhost:3000/products'
   getProduct(id : any){
     return data.find(item => item.id == id)
   }
   getProductList(): Observable<Iproduct[]>{
-    return this.http.get<Iproduct[]>('http://localhost:3000/products')
+    return this.http.get<Iproduct[]>(`${this.base_url}`)
   }
   getProductDetail(id: any): Observable<Iproduct>{
-    return this.http.get<Iproduct>(`http://localhost:3000/products/${id}`)
+    return this.http.get<Iproduct>(`${this.base_url}/${id}`)
   }
   deleteProduct(id: any){
-    return this.http.delete(`http://localhost:3000/products/${id}`)
+    return this.http.delete(`${this.base_url}/${id}`)
+  }
+  addProduct(data: Iproduct): Observable<Iproduct>{
+    return this.http.post<Iproduct>(`${this.base_url}`, data)
+  }
+  updateProduct(data: Iproduct): Observable<Iproduct>{
+    return this.http.put<Iproduct>(`${this.base_url}/${data.id}`, data)
   }
 }

@@ -8,14 +8,16 @@ import { HomepageComponent } from './page/homepage/homepage.component';
 import { ProductsComponent } from './page/products/products.component';
 import { ProductDetailComponent } from './page/product-detail/product-detail.component';
 import { ProductAddComponent } from './page/product-add/product-add.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { NotFoundComponent } from './page/not-found/not-found.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ProductsComponent,
     ProductDetailComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
