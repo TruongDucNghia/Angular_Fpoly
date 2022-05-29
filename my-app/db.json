@@ -3,26 +3,23 @@
     {
       "id": 1,
       "name": "Product A update",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReHTRKk6eSVY0cdIDwD_u94q7vzCMqzyxwbA&usqp=CAU",
       "price": 200,
       "desc": "MO TA"
     },
     {
-      "id": 2,
-      "name": "Product B",
-      "price": 200,
-      "desc": "MO TA"
-    },
-    {
-      "name": "product N",
-      "price": "1000",
-      "desc": "",
-      "id": 3
-    },
-    {
-      "name": "Products T update",
+      "name": "Products Vjp Pro No1",
       "price": "10000",
-      "desc": "mo ta",
-      "id": 4
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653835341/hrqsful0bcbfcfjpojok.jpg",
+      "desc": "Mô tả",
+      "id": 6
+    },
+    {
+      "name": "Vip pro no1",
+      "price": "2000",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653835435/gpeysisrrkgjioiltfbk.jpg",
+      "desc": "alo alo",
+      "id": 7
     }
   ]
 }

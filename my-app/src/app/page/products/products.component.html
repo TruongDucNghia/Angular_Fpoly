@@ -6,6 +6,7 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Images</th>
                 <th>Description</th>
                 <th>Setting</th>
             </tr>
@@ -15,6 +16,9 @@
                 <td>{{product.id}}</td>
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
+                <td>
+                    <img src={{product.img}} width="200px"/>
+                </td>
                 <td>{{product.desc}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="onHandleClick(product.id!)">Delete</button>
