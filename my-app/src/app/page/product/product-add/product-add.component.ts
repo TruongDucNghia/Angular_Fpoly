@@ -1,3 +1,5 @@
+import { CategoryService } from './../../../services/category.service';
+import { category } from './../../../model/category';
 import { Iproduct } from '../../../model/product';
 import { ProductService } from '../../../services/product.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
@@ -10,18 +12,24 @@ import axios from 'axios';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent implements OnInit {
-  @Output() createProduct = new EventEmitter<{ name: string, price: number }>()
   product: Iproduct = {
     name: "",
     price: 0,
+    categoryId: 0,
     img: "",
     desc: ""
   }
+  category!: category[]
   constructor(
     private ProductService: ProductService,
+    private CategoryService: CategoryService,
     private router: Router,
     private ActivatedRoute: ActivatedRoute
-  ) { }
+  ) { 
+    this.CategoryService.listCategory().subscribe(data =>{
+      this.category = data
+    })
+  }
 
   id = this.ActivatedRoute.snapshot.paramMap.get('id')
   ngOnInit(): void {
@@ -31,11 +39,14 @@ export class ProductAddComponent implements OnInit {
   }
   onSubmit() {
     if (this.id) {
-      this.ProductService.updateProduct(this.product).subscribe(data => this.router.navigateByUrl('/products'))
+      this.ProductService.updateProduct(this.product).subscribe(data => 
+        this.router.navigateByUrl('/products'))
     } else {
-      this.ProductService.addProduct(this.product).subscribe(data =>
+      const categoryId = Number(this.product.categoryId)
+      this.ProductService.addProduct({...this.product, categoryId}).subscribe(data =>
         this.router.navigateByUrl('/products')
       )
+      
     }
 
   }
@@ -51,7 +62,6 @@ export class ProductAddComponent implements OnInit {
         "Content-Type": "application/form-data"
       }
     })
-    console.log(response.data.url);
     this.product.img = response.data.url
   }
 

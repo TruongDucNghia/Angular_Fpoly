@@ -1,0 +1,29 @@
+<h2>List categorys</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Setting</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cate of category">
+            <td>{{cate.id}}</td>
+            <td>{{cate.name}}</td>
+            <td>
+                <img src={{cate.img}} alt="" width="200px">
+            </td>
+            <td>
+                <button (click)="onDelete(cate.id!)" class="btn btn-danger">Delete</button>
+                <button class="btn btn-info ms-2">
+                    <a routerLink="/category/{{cate.id}}">Detail</a>
+                </button>
+                <button class="btn btn-success ms-2">
+                    <a routerLink="/category/{{cate.id}}/update">Update</a>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

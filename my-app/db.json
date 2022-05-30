@@ -5,12 +5,14 @@
       "name": "Product A update",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReHTRKk6eSVY0cdIDwD_u94q7vzCMqzyxwbA&usqp=CAU",
       "price": 200,
+      "categoryId": 1,
       "desc": "MO TA"
     },
     {
       "name": "Products Vjp Pro No1",
       "price": "10000",
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653835341/hrqsful0bcbfcfjpojok.jpg",
+      "categoryId": 2,
       "desc": "Mô tả",
       "id": 6
     },
@@ -18,8 +20,29 @@
       "name": "Vip pro no1",
       "price": "2000",
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653835435/gpeysisrrkgjioiltfbk.jpg",
+      "categoryId": 2,
       "desc": "alo alo",
       "id": 7
+    },
+    {
+      "name": "Products NNN",
+      "price": "2000",
+      "categoryId": 1,
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653925673/g5jejjspkl6qv2zgjf8d.jpg",
+      "desc": "Mô tả vjp pro",
+      "id": 8
+    }
+  ],
+  "categorys": [
+    {
+      "name": "Thời trang nữ năng động",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653920032/rpd1fzkgah9e7qdwb3ap.jpg",
+      "id": 1
+    },
+    {
+      "name": "Thời trang nam ",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653920126/ngaedjns52pmft8g8dnl.jpg",
+      "id": 2
     }
   ]
 }
