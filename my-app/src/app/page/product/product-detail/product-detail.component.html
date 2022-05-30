@@ -1,0 +1,14 @@
+<div class="main">
+    <a routerLink="/products">
+        <button class="btn btn-info" >Back list products</button>
+    </a>
+    <h2>Products detail</h2>
+    <ul>
+        <li>{{pro?.name}}</li>
+        <li>{{pro?.price}}</li>
+        <li>
+            <img src={{pro?.img}} alt="" width="200px">
+        </li>
+        <li>{{pro?.desc}}</li>
+    </ul>
+</div>

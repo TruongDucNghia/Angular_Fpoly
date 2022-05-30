@@ -1,7 +1,7 @@
 import { NotFoundComponent } from './page/not-found/not-found.component';
-import { ProductsComponent } from './page/products/products.component';
-import { ProductDetailComponent } from './page/product-detail/product-detail.component';
-import { ProductAddComponent } from './page/product-add/product-add.component';
+import { ProductsComponent } from './page/product/products/products.component';
+import { ProductDetailComponent } from './page/product/product-detail/product-detail.component';
+import { ProductAddComponent } from './page/product/product-add/product-add.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './page/homepage/homepage.component';

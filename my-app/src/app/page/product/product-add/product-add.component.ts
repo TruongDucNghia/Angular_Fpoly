@@ -1,5 +1,5 @@
-import { Iproduct } from './../../model/product';
-import { ProductService } from './../../services/product.service';
+import { Iproduct } from '../../../model/product';
+import { ProductService } from '../../../services/product.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import axios from 'axios';
