@@ -44,5 +44,19 @@
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653920126/ngaedjns52pmft8g8dnl.jpg",
       "id": 2
     }
+  ],
+  "users": [
+    {
+      "email": "nghia@gmail.com",
+      "password": "$2a$10$xztvEXzkKtOwOVrjT9ZU7eU/W1Hni0hWCazbq8nNWaurGkEwcXtla",
+      "username": "nghia",
+      "id": 1
+    },
+    {
+      "email": "hung@gmail.com",
+      "password": "$2a$10$iBeEYfAJtxH/..Q5zp5zV.GvUwxHL3XCnVX/mTryhTiOLggKhAZoy",
+      "username": "hung ",
+      "id": 2
+    }
   ]
 }

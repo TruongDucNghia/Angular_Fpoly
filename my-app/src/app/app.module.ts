@@ -24,6 +24,11 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { CategoryComponent } from './page/categorys/category/category.component';
 import { AddCategoryComponent } from './page/categorys/add-category/add-category.component';
 import { DetailCategoryComponent } from './page/categorys/detail-category/detail-category.component';
+import { ListProductsComponent } from './page/product/list-products/list-products.component';
+import { SigninComponent } from './page/users/signin/signin.component';
+import { SignupComponent } from './page/users/signup/signup.component';
+import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
+import { LayoutClientComponent } from './components/layout-client/layout-client.component';
 registerLocaleData(en);
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ registerLocaleData(en);
     NotFoundComponent,
     CategoryComponent,
     AddCategoryComponent,
-    DetailCategoryComponent
+    DetailCategoryComponent,
+    ListProductsComponent,
+    SigninComponent,
+    SignupComponent,
+    LayoutAdminComponent,
+    LayoutClientComponent
   ],
   imports: [
     BrowserModule,

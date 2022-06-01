@@ -1,3 +1,9 @@
+import { LayoutClientComponent } from './components/layout-client/layout-client.component';
+import { AuthGuard } from './components/auth.guard';
+import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
+import { SignupComponent } from './page/users/signup/signup.component';
+import { SigninComponent } from './page/users/signin/signin.component';
+import { ListProductsComponent } from './page/product/list-products/list-products.component';
 import { DetailCategoryComponent } from './page/categorys/detail-category/detail-category.component';
 import { AddCategoryComponent } from './page/categorys/add-category/add-category.component';
 import { CategoryComponent } from './page/categorys/category/category.component';
@@ -10,16 +16,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './page/homepage/homepage.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent, pathMatch: 'full'},
-  {path: 'homepage', component: HomepageComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'products/add', component: ProductAddComponent},
-  {path: 'product/:id/detail', component: ProductDetailComponent},
-  {path: 'product/:id/edit', component: ProductAddComponent},
-  {path: 'category', component: CategoryComponent},
-  {path: 'category/add', component: AddCategoryComponent},
-  {path: 'category/:id', component: DetailCategoryComponent},
-  {path: 'category/:id/update', component: AddCategoryComponent},
+  // {path: '', component: HomepageComponent, pathMatch: 'full'},
+  {path: 'admin', component: LayoutAdminComponent, canActivate: [AuthGuard], children: [
+    {path: 'homepage', component: HomepageComponent},
+    {path: 'products', component: ProductsComponent, children:[
+      {path: 'list', component: ListProductsComponent},
+      {path: 'add', component: ProductAddComponent},
+      {path: ':id/detail', component: ProductDetailComponent},
+      {path: ':id/edit', component: ProductAddComponent},
+    ]},
+    {path: 'category', component: CategoryComponent},
+    {path: 'category/add', component: AddCategoryComponent},
+    {path: 'category/:id', component: DetailCategoryComponent},
+    {path: 'category/:id/update', component: AddCategoryComponent},
+  ]},
+  {path: '', component: LayoutClientComponent, children: [
+    {path: '', redirectTo:'signin', pathMatch:'full'},
+    {path: 'signin', component: SigninComponent},
+    {path: 'signup', component: SignupComponent},
+  ]},
   {path: '**', component: NotFoundComponent}
 ];
 
